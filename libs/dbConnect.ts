@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 require("dotenv").config();
 
 const MONGO_URL = process.env.MONGO_URI;
-console.log(MONGO_URL);
 
 async function dbConnect() {
   if (mongoose.connections[0].readyState) return; // If it's already connected

@@ -3,7 +3,6 @@ import { fetchSinglePlayerData } from "@/libs/getSinglePlayerData";
 import { PlayerType } from "@/types/types";
 import dbConnect from "@/libs/dbConnect";
 import Player from "@/models/Player";
-import Stats from "@/models/Stats";
 
 interface ParamsType {
   playerId: number;
