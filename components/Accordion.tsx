@@ -23,7 +23,9 @@ export default function AccordionComponent({ playerData }: Props) {
         }`}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Card playerData={playerData}></Card>
+        <div>
+          <Card playerData={playerData}></Card>
+        </div>
       </AccordionDetails>
     </Accordion>
   );

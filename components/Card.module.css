@@ -1,0 +1,38 @@
+.card {
+  width: 100%;
+  max-width: 350px;
+  height: 450px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face__front {
+  background-color: #bbb;
+  color: black;
+}
+
+.card__face__back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
