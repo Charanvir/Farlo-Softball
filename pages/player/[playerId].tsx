@@ -13,7 +13,6 @@ export default function SinglePlayer({
 }: {
   playerData: PlayerType[];
 }) {
-  console.log(playerData);
   return <div>[playerId]</div>;
 }
 

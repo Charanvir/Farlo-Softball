@@ -4,6 +4,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { FaBaseballBall } from "react-icons/fa";
+import Card from "./Card";
 
 type Props = {
   playerData: PlayerType;
@@ -11,21 +12,18 @@ type Props = {
 
 export default function AccordionComponent({ playerData }: Props) {
   return (
-    <Accordion key={playerData._id}>
+    <Accordion className="bg-lime-100" key={playerData._id}>
       <AccordionSummary
         expandIcon={<FaBaseballBall />}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography>{`${playerData.firstName} ${
+        <Typography className="text-sky-900">{`${playerData.firstName} ${
           playerData.lastName === "N/A" ? "" : playerData.lastName
         }`}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </Typography>
+        <Card playerData={playerData}></Card>
       </AccordionDetails>
     </Accordion>
   );
