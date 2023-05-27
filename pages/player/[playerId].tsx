@@ -11,9 +11,15 @@ interface ParamsType {
 export default function SinglePlayer({
   playerData,
 }: {
-  playerData: PlayerType[];
+  playerData: PlayerType;
 }) {
-  return <div>[playerId]</div>;
+  return (
+    <div>
+      <p>{playerData.firstName}</p>
+      <p>{playerData.lastName}</p>
+      <p>{playerData.stats[0].battingAverage}</p>
+    </div>
+  );
 }
 
 export async function getStaticProps({ params }: { params: ParamsType }) {
