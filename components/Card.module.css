@@ -27,12 +27,20 @@
 }
 
 .card__face__front {
-  background-color: #bbb;
+  background-color: lightgreen;
+  border: 10px solid black;
+  padding: 20px;
   color: black;
 }
 
 .card__face__back {
-  background-color: #555;
-  color: white;
+  background-color: lightgreen;
+  border: 10px solid black;
+  padding: 20px;
+  color: black;
   transform: rotateY(180deg);
+}
+
+.transform {
+  transform: rotate(45deg);
 }

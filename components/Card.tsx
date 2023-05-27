@@ -11,6 +11,23 @@ type Props = {
 };
 
 export default function Card({ playerData }: Props) {
+  let battingAverage: number | string = "N/A";
+  let hits: number | string = "N/A";
+  let atBats: number | string = "N/A";
+
+  if (playerData.stats.length === 1) {
+    battingAverage = playerData.stats[0].battingAverage;
+    hits = playerData.stats[0].hits;
+  } else if (playerData.stats.length > 1) {
+    atBats = 0;
+    hits = 0;
+    for (let i = 0; i < playerData.stats.length; i++) {
+      atBats += playerData.stats[i].atBats;
+      hits += playerData.stats[i].hits;
+    }
+    battingAverage = (hits / atBats).toFixed(3);
+  }
+
   const [isFlipped, setIsFlipped] = useState(false);
   const router = useRouter();
   const clickHandler = () => {
@@ -32,6 +49,10 @@ export default function Card({ playerData }: Props) {
           <div
             className={`${styles.card__face} ${styles.card__face__front} bg-gray-300 h-full flex flex-col`}
           >
+            <div className="absolute top-7 text-4xl right-1 z-10 bg-lime-100 text-sky-900 py-1 px-2 transform rotate-45">
+              Farlo
+            </div>
+
             <div className="relative w-full flex-grow overflow-hidden">
               <Image
                 src={"/images/defaultProfile.png"}
@@ -41,7 +62,7 @@ export default function Card({ playerData }: Props) {
               />
             </div>
             <div className="p-4">
-              <h2 className="font-bold text-lg">
+              <h2 className="font-bold text-xl text-sky-900">
                 {playerData.firstName} {playerData.lastName}
               </h2>
             </div>
@@ -57,9 +78,12 @@ export default function Card({ playerData }: Props) {
                 fill
               />
             </div>
-            <div className="p-4">
-              <h2>{playerData.firstName}s Stats</h2>
-              <p>Career Stats: </p>
+            <div className="p-4 text-sky-900">
+              <p className="text-md underline">Career Stats: </p>
+              <div className="flex justify-between">
+                <p className="text-md">Hits: {hits}</p>
+                <p className="text-md">Batting Average: {battingAverage}</p>
+              </div>
             </div>
           </div>
         </div>
