@@ -1,5 +1,6 @@
 import { fetchAllSeasonsData } from "@/libs/getAllSeasonsData";
 import { StatType } from "@/types/types";
+import SeasonOverviewCard from "@/components/SeasonOverviewCard";
 
 export default function Seasons({
   teamData,
@@ -12,7 +13,29 @@ export default function Seasons({
   data2021: Partial<StatType>;
   data2022: Partial<StatType>;
 }) {
-  return <div>Seasons</div>;
+  return (
+    <div>
+      <h1 className="text-center text-3xl py-3">Seasons Overview</h1>
+      <div className="flex justify-center items-center">
+        <SeasonOverviewCard
+          teamData={teamData[0]}
+          leaders={data2020}
+        ></SeasonOverviewCard>
+      </div>
+      <div className="flex justify-center items-center">
+        <SeasonOverviewCard
+          teamData={teamData[1]}
+          leaders={data2021}
+        ></SeasonOverviewCard>
+      </div>
+      <div className="flex justify-center items-center">
+        <SeasonOverviewCard
+          teamData={teamData[2]}
+          leaders={data2022}
+        ></SeasonOverviewCard>
+      </div>
+    </div>
+  );
 }
 
 export async function getStaticProps() {

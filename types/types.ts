@@ -13,6 +13,7 @@ export type StatType = {
   sluggingPercentage: number;
   ops: number;
   sacFly: number;
+  year: number;
 };
 
 export type PlayerType = {
