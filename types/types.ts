@@ -14,6 +14,7 @@ export type StatType = {
   ops: number;
   sacFly: number;
   year: number;
+  type: string;
 };
 
 export type PlayerType = {
