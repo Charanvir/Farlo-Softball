@@ -27,7 +27,7 @@ export default function SeasonOverviewCard({ teamData, leaders }: Props) {
           <h2 className="text-xl hidden sm:block">BA Leader</h2>
           <h2 className="text-xl sm:hidden">BA</h2>
           <Avatar
-            src="./images/defaultProfile.png"
+            src="/images/defaultProfile.png"
             alt={leaders.battingAverageLeader.type}
             className="m-auto"
           ></Avatar>

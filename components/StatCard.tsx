@@ -5,6 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { FaBaseballBall } from "react-icons/fa";
 import {
+  Avatar,
   Paper,
   Table,
   TableBody,
@@ -34,10 +35,18 @@ export default function StatCard({ statData }: Props) {
   });
   statData = statData.filter((obj) => obj.name !== "team");
   return (
-    <div className="text-center w-1/2 md:w-1/4">
-      <p>{statData[0].name}</p>
-      <p>{statData[0].stat}</p>
-      <p>{statData[0].statName}</p>
+    <div className="text-center w-1/2 sm:w-1/4">
+      <div className="bg-emerald-100">
+        <h2 className="text-xl">{statData[0].name}</h2>
+        <Avatar
+          src="/images/defaultProfile.png"
+          alt={`${statData[0].name}`}
+          className="m-auto"
+        ></Avatar>
+        <p className="text-lg">{statData[0].stat}</p>
+        <p className="text-lg">{statData[0].statName}</p>
+      </div>
+
       <Accordion className="bg-sky-100">
         <AccordionSummary
           expandIcon={<FaBaseballBall />}
