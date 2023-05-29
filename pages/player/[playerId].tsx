@@ -17,7 +17,6 @@ export default function SinglePlayer({
     <div>
       <p>{playerData.firstName}</p>
       <p>{playerData.lastName}</p>
-      <p>{playerData.stats[0].battingAverage}</p>
     </div>
   );
 }
