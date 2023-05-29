@@ -12,7 +12,6 @@ type Props = {
 };
 
 export default function SeasonTable({ teamData }: Props) {
-  console.log(teamData);
   return (
     <TableContainer component={Paper}>
       <Table>
