@@ -2,6 +2,7 @@ import { StatType } from "@/types/types";
 import React from "react";
 import { Avatar } from "@mui/material";
 import SeasonAccordion from "./SeasonAccordion";
+import Link from "next/link";
 
 // Show stat and stats leader
 // Table showing team stats for that year
@@ -59,6 +60,9 @@ export default function SeasonOverviewCard({ teamData, leaders }: Props) {
         </div>
       </div>
       <SeasonAccordion teamData={teamData}></SeasonAccordion>
+      <Link href={`/season/${teamData.year}`}>
+        View more details for the {teamData.year}
+      </Link>
     </div>
   );
 }
