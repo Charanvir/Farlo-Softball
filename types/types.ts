@@ -1,5 +1,5 @@
 export type StatType = {
-  plateApperances: number;
+  plateAppearance: number;
   atBats: number;
   hits: number;
   singles: number;
