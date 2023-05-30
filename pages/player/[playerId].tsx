@@ -18,48 +18,40 @@ export default function SinglePlayer({
   if (playerData.stats.length >= 1) {
     for (let i = 0; i < playerData.stats.length; i++) {
       careerStats.push({
-        statName: "At Bats",
+        statName: "plateAppearances",
+        stat: playerData.stats[i].plateAppearance,
+      });
+      careerStats.push({
+        statName: "atBats",
         stat: playerData.stats[i].atBats,
       });
       careerStats.push({
-        statName: "Hits",
+        statName: "hits",
         stat: playerData.stats[i].hits,
       });
       careerStats.push({
-        statName: "Singles",
+        statName: "singles",
         stat: playerData.stats[i].singles,
       });
       careerStats.push({
-        statName: "Doubles",
+        statName: "doubles",
         stat: playerData.stats[i].doubles,
       });
       careerStats.push({
-        statName: "Triples",
+        statName: "triples",
         stat: playerData.stats[i].triples,
       });
       careerStats.push({
-        statName: "Home Runs",
+        statName: "homeRuns",
         stat: playerData.stats[i].homeRuns,
       });
       careerStats.push({
-        statName: "Walks",
+        statName: "walks",
         stat: playerData.stats[i].walks,
       });
       careerStats.push({
-        statName: "Strikeouts",
+        statName: "strikouts",
         stat: playerData.stats[i].strikeouts,
-      });
-      careerStats.push({
-        statName: "OPS",
-        stat: playerData.stats[i].ops,
-      });
-      careerStats.push({
-        statName: "On Base %",
-        stat: playerData.stats[i].onBasePercentage,
-      });
-      careerStats.push({
-        statName: "Slugging %",
-        stat: playerData.stats[i].sluggingPercentage,
       });
     }
   }
