@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 type Props = {
@@ -71,11 +72,77 @@ export default function PlayerProfile({
         : undefined;
     ops = onBase && slugging ? onBase + slugging : undefined;
   }
-
+  console.log(totalStats);
   // On Mobile
   // Profile Picture should be centered and then bio information and career stats below
   // On Full Screen
   // Profile Picture and bio/career stats should be on the same row
 
-  return <div>SinglePlayer</div>;
+  return (
+    <div className="grid sm:grid-cols-6 flex items-center pt-10">
+      <div className="sm:col-span-2 flex justify-center bg-white sm:w-full w-1/2 mx-auto sm:mx-0 border-8 border-black border-solid">
+        <img
+          src="/images/defaultProfile.png"
+          alt="Profile Profile"
+          className="w-full h-auto m-2"
+        />
+      </div>
+      <div className="sm:col-span-4 flex flex-col justify-center pt-5 sm:pt-0 bg-white border-8 border-black border-solid">
+        <h2 className="self-center text-3xl">
+          {firstName} {lastName}
+        </h2>
+        <h2 className="self-center pt-5">D.O.B: {birthDate}</h2>
+        {Object.keys(totalStats).length > 0 && (
+          <div className="self-center pt-5">
+            <div className="flex flex-wrap justify-around">
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Batting Avg</p>
+                <p>{battingAverage?.toFixed(3)}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Hits</p>
+                <p>{totalStats.hits}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Singles</p>
+                <p>{totalStats.singles}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Doubles</p>
+                <p>{totalStats.doubles}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Triples</p>
+                <p>{totalStats.triples}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Home Runs</p>
+                <p>{totalStats.homeRuns}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Walks</p>
+                <p>{totalStats.walks}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Strikeouts</p>
+                <p>{totalStats.string}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">OPS</p>
+                <p>{ops?.toFixed(3)}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">On Base</p>
+                <p>{onBase?.toFixed(3)}</p>
+              </div>
+              <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
+                <p className="text-lg">Slugging</p>
+                <p>{slugging?.toFixed(3)}</p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
