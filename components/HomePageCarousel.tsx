@@ -30,8 +30,8 @@ export default function HomePageCarousel() {
           <Image
             src={image.src}
             alt={image.alt}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             className="rounded-lg"
           />
         </div>
