@@ -67,8 +67,8 @@ export default function SinglePlayer({
         stats={careerStats}
       ></PlayerProfile>
       {playerData.stats.length > 0 && (
-        <div className="my-5 ">
-          <h2 className="text-center text-2xl my-5 text-slate-900 underline">
+        <div className="my-5">
+          <h2 className="text-center text-3xl text-slate-900 mb-2 underline w-1/2 mx-auto bg-white border-4 border-black border-solid">
             Yearly Stats
           </h2>
           <SinglePlayerTable stats={playerData.stats}></SinglePlayerTable>

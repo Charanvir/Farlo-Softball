@@ -16,11 +16,14 @@ export default function SinglePlayerTable({ stats }: Props) {
   return (
     <div className="sm:flex sm:flex-col">
       {stats.map((stat, index) => (
-        <div className="mb-4 overflow-x-auto" key={index}>
+        <div
+          className="mb-4 overflow-x-auto border-4 border-black border-solid"
+          key={index}
+        >
           <TableContainer component={Paper}>
             <Table>
               <TableHead>
-                <TableRow>
+                <TableRow className="bg-gray-200">
                   <TableCell>Year</TableCell>
                   <TableCell>At Bats</TableCell>
                   <TableCell>Plate Apps</TableCell>
