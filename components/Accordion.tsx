@@ -12,13 +12,18 @@ type Props = {
 
 export default function AccordionComponent({ playerData }: Props) {
   return (
-    <Accordion className="bg-lime-100" key={playerData._id}>
+    <Accordion
+      className="sm:w-2/3 w-4/5 m-auto bg-transparent"
+      key={playerData._id}
+      style={{ margin: "auto" }}
+    >
       <AccordionSummary
         expandIcon={<FaBaseballBall />}
         aria-controls="panel1a-content"
         id="panel1a-header"
+        className="bg-white"
       >
-        <Typography className="text-sky-900">{`${playerData.firstName} ${
+        <Typography className="text-sky-900 ">{`${playerData.firstName} ${
           playerData.lastName === "N/A" ? "" : playerData.lastName
         }`}</Typography>
       </AccordionSummary>

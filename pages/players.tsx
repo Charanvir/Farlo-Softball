@@ -13,7 +13,7 @@ export default function players({ playerData }: { playerData: PlayerType[] }) {
     return 0;
   });
   return (
-    <div className="bg-sky-100">
+    <div>
       <h1 className="text-center text-2xl py-5 text-sky-900">
         Meet the Farlo Players
       </h1>
