@@ -69,7 +69,7 @@ export default function Navbar() {
           <div className="pb-3 space-y-1 sm:px-3 text-center">
             {navLinks.map((link) => (
               <Link
-                className=" hover:bg-green-300 hover:text-sky-600 px-3 py-2 rounded-md
+                className="hover:bg-zinc-700 px-3 py-2 rounded-md
               text-xl font-mono transition-all duration-500 "
                 href={link.link}
                 key={link.title}
