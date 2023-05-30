@@ -73,6 +73,11 @@ export default function SinglePlayer({
           <SinglePlayerTable stats={playerData.stats}></SinglePlayerTable>
         </div>
       )}
+      {playerData.stats.length === 0 && (
+        <h1 className="text-center text-3xl text-slate-900 underline w-1/2 mx-auto bg-white border-4 border-black border-solid my-5">
+          Stats Incoming
+        </h1>
+      )}
     </div>
   );
 }

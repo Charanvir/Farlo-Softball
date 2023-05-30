@@ -17,42 +17,27 @@ export default function Home() {
 
         <div className="text-xl text-center text-gray-700 bg-sky-100">
           <p className="mb-4">
-            We're delighted that you've joined us! We're a vibrant and committed
-            softball team, proudly carrying the spirit of our community with
-            every pitch and swing. Over the years, we've cultivated a team that
-            plays with determination, skill, and a strong sense of camaraderie.
+            Welcome to Farlo Softball Club! We're a passionate team known for
+            skill, determination, and camaraderie. Our dedication led us to a
+            championship title in 2022, a testament to our love for the game and
+            pursuit of excellence.
           </p>
 
           <p className="mb-4">
-            Our crowning moment came in 2022 when we clinched the championship
-            title. It was a monumental achievement that demonstrated our passion
-            for the game, unyielding team spirit, and commitment to excellence.
+            The 'Players' page showcases our Farlo players, each represented by
+            a unique baseball card. On individual player pages, you'll find
+            comprehensive career and yearly stats. The 'Seasons' page provides
+            yearly highlights, showcasing major stat leaders and team stats. In
+            each specific season page, you'll discover the top performer in
+            every stat, followed by a detailed table covering the entire team's
+            performance. Explore and enjoy the rich history of Farlo Softball
+            Club!
           </p>
 
           <p className="mb-4">
-            But Farlo Softball Club isn't just about winning—it's about the
-            journey. We're as excited about the process of growth, learning, and
-            striving for better as we are about the victories. And we can't wait
-            to bring you along for the ride.
-          </p>
-
-          <p className="mb-4">
-            Explore our website to meet the stars of our team. Check out the
-            'Players' section where you can delve into individual player
-            profiles and their contributions to the club. In our 'Seasons'
-            section, you can journey through our history and relive our most
-            memorable moments. Find out who led each season in various
-            statistical categories and see how our team has evolved over time.
-          </p>
-
-          <p className="mb-4">
-            We're proud of our past, excited about our present, and optimistic
-            for our future. Whether you're a potential player, a fan, or just a
-            softball enthusiast, we invite you to join us on this journey.
-          </p>
-
-          <p>
-            Welcome to the Farlo Softball Club, where every game is a home run!
+            Join us as a player, a fan, or a softball enthusiast as we celebrate
+            our past, enjoy our present, and anticipate our future. At Farlo
+            Softball Club, every game is a home run! Welcome aboard!
           </p>
         </div>
       </div>
