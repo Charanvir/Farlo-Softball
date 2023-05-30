@@ -14,7 +14,7 @@ export default function players({ playerData }: { playerData: PlayerType[] }) {
   });
   return (
     <div>
-      <h1 className="text-center text-2xl py-5 text-sky-900">
+      <h1 className="text-center text-2xl py-5 text-sky-900 sm:w-2/3 w-4/5 mx-auto bg-gray-100 my-5">
         Meet the Farlo Players
       </h1>
       {playerData.map((player) => (

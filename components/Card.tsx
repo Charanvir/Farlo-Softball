@@ -48,7 +48,7 @@ export default function Card({ playerData }: Props) {
           }`}
         >
           <div
-            className={`${styles.card__face} ${styles.card__face__front} bg-gray-300 h-full flex flex-col`}
+            className={`${styles.card__face} ${styles.card__face__front} h-full flex flex-col`}
           >
             <div className="absolute top-7 text-4xl right-1 z-10 bg-lime-100 text-sky-900 py-1 px-2 transform rotate-45">
               Farlo
@@ -90,7 +90,8 @@ export default function Card({ playerData }: Props) {
         </div>
       </div>
       <button
-        className="mt-4 bg-blue-500 text-white px-4 py-2 rounded shadow"
+        className="mt-4 text-sky-900 text-md px-4 py-2 rounded shadow border-2 border-black"
+        style={{ backgroundColor: "rgb(238,232,170)" }}
         onClick={clickHandler}
       >
         View {playerData.firstName}'s Player Page

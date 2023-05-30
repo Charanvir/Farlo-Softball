@@ -79,7 +79,7 @@ export default function SingleSeason({
 
   return (
     <div>
-      <h1 className="text-center text-3xl py-5 underline bg-lime-100">
+      <h1 className="text-center text-3xl py-5 underline bg-white m-5">
         The {seasonData[0].year} Farlo Season
       </h1>
       <div className="flex flex-wrap justify-center">

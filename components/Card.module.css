@@ -27,14 +27,14 @@
 }
 
 .card__face__front {
-  background-color: lightgreen;
+  background-color: rgb(238, 232, 170);
   border: 10px solid black;
   padding: 20px;
   color: black;
 }
 
 .card__face__back {
-  background-color: lightgreen;
+  background-color: rgb(238, 232, 170);
   border: 10px solid black;
   padding: 20px;
   color: black;

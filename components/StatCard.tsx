@@ -36,7 +36,7 @@ export default function StatCard({ statData }: Props) {
   statData = statData.filter((obj) => obj.name !== "team");
   return (
     <div className="text-center w-1/2 sm:w-1/4">
-      <div className="bg-emerald-100">
+      <div className="bg-gray-200">
         <h2 className="text-xl">{statData[0].name}</h2>
         <Avatar
           src="/images/defaultProfile.png"

@@ -21,7 +21,7 @@ export default function Seasons({
 }) {
   return (
     <div>
-      <h1 className="text-center text-3xl py-3 bg-lime-100 underline">
+      <h1 className="text-center text-3xl py-3 bg-gray-200 underline">
         Seasons Overview
       </h1>
       <div className="flex justify-center border-style border-2 w-4/5 m-auto my-5">
