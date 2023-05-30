@@ -15,7 +15,6 @@ export default function SinglePlayer({
 }: {
   playerData: PlayerType;
 }) {
-  console.log(playerData.stats);
   let careerStats = [];
   if (playerData.stats.length >= 1) {
     for (let i = 0; i < playerData.stats.length; i++) {
@@ -52,7 +51,7 @@ export default function SinglePlayer({
         stat: playerData.stats[i].walks,
       });
       careerStats.push({
-        statName: "strikouts",
+        statName: "strikeouts",
         stat: playerData.stats[i].strikeouts,
       });
     }

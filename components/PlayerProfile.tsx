@@ -120,7 +120,7 @@ export default function PlayerProfile({
               </div>
               <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
                 <p className="text-lg">Strikeouts</p>
-                <p>{totalStats.string}</p>
+                <p>{totalStats.strikeouts}</p>
               </div>
               <div className="m-2 bg-gray-300 p-2 rounded shadow-lg text-center">
                 <p className="text-lg">OPS</p>

@@ -12,7 +12,6 @@ type Props = {
 };
 
 export default function SinglePlayerTable({ stats }: Props) {
-  console.log(stats);
   return (
     <div className="sm:flex sm:flex-col">
       {stats.map((stat, index) => (
