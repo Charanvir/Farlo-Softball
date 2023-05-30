@@ -4,6 +4,7 @@ import { PlayerType } from "@/types/types";
 import dbConnect from "@/libs/dbConnect";
 import Player from "@/models/Player";
 import PlayerProfile from "@/components/PlayerProfile";
+import SinglePlayerTable from "@/components/SinglePlayerTable";
 
 interface ParamsType {
   playerId: number;
@@ -14,6 +15,7 @@ export default function SinglePlayer({
 }: {
   playerData: PlayerType;
 }) {
+  console.log(playerData.stats);
   let careerStats = [];
   if (playerData.stats.length >= 1) {
     for (let i = 0; i < playerData.stats.length; i++) {
@@ -64,6 +66,14 @@ export default function SinglePlayer({
         profilePictureName={playerData.profilePictureName}
         stats={careerStats}
       ></PlayerProfile>
+      {playerData.stats.length > 0 && (
+        <div className="my-5 ">
+          <h2 className="text-center text-2xl my-5 text-slate-900 underline">
+            Yearly Stats
+          </h2>
+          <SinglePlayerTable stats={playerData.stats}></SinglePlayerTable>
+        </div>
+      )}
     </div>
   );
 }

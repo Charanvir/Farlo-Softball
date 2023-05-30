@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 
 import { PlayerType } from "@/types/types";
@@ -92,7 +93,7 @@ export default function Card({ playerData }: Props) {
         className="mt-4 bg-blue-500 text-white px-4 py-2 rounded shadow"
         onClick={clickHandler}
       >
-        View {playerData.firstName}s Player Page
+        View {playerData.firstName}'s Player Page
       </button>
     </div>
   );

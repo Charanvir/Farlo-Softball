@@ -72,15 +72,10 @@ export default function PlayerProfile({
         : undefined;
     ops = onBase && slugging ? onBase + slugging : undefined;
   }
-  console.log(totalStats);
-  // On Mobile
-  // Profile Picture should be centered and then bio information and career stats below
-  // On Full Screen
-  // Profile Picture and bio/career stats should be on the same row
 
   return (
     <div className="grid sm:grid-cols-6 flex items-center pt-10">
-      <div className="sm:col-span-2 flex justify-center bg-white sm:w-full w-1/2 mx-auto sm:mx-0 border-8 border-black border-solid">
+      <div className="sm:col-span-2 flex justify-center bg-white sm:w-3/4 w-1/2 mx-auto sm:mx-auto border-8 border-black border-solid">
         <img
           src="/images/defaultProfile.png"
           alt="Profile Profile"
