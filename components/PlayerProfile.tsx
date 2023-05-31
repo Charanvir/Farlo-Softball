@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import styles from "./PlayerProfile.module.css";
 
 type Props = {
   firstName: string;
@@ -74,8 +75,10 @@ export default function PlayerProfile({
   }
 
   return (
-    <div className="grid sm:grid-cols-6 flex items-center pt-10">
-      <div className="sm:col-span-2 flex justify-center bg-white sm:w-3/4 w-1/2 mx-auto sm:mx-auto border-8 border-black border-solid">
+    <div
+      className={`grid sm:grid-cols-6 flex items-center pt-10 ${styles.heroImage}`}
+    >
+      <div className="sm:col-span-2 flex justify-center bg-transparent sm:w-3/4 w-1/2 mx-auto sm:mx-auto border-2 border-black border-solid">
         <img
           src="/images/defaultProfile.png"
           alt="Profile Profile"

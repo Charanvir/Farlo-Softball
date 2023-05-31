@@ -1,0 +1,5 @@
+.heroImage {
+  background: url("/images/defaultActionPicture.png") no-repeat center center
+    fixed;
+  background-size: cover;
+}
