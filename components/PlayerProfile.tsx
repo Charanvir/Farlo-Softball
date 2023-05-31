@@ -41,7 +41,7 @@ export default function PlayerProfile({
   }
 
   const totalStats = sumValuesOfLikeKeys(stats);
-
+  console.log(totalStats);
   let battingAverage: number | undefined;
   let onBase: number | undefined;
   let slugging: number | undefined;
